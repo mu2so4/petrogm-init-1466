@@ -7,6 +7,7 @@ private:
     double y;
 
 public:
+    Coordinate();
     Coordinate(double x, double y);
     virtual ~Coordinate() = default;
 

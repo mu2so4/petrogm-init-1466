@@ -1,8 +1,12 @@
 #include "point.hpp"
-#include <format>
+#include <fmt/core.h>
 
-std::string Point::Draw(std::ostream &out) const {
-    out << std::format("point at ({}, {})", coordinate.getX(), coordinate.getY());
+Point::Point(double x, double y):
+    coordinate(x, y) {}
+
+std::string &Point::Draw() const {
+    auto result = fmt::format("point at ({}, {})", coordinate.getX(), coordinate.getY());
+    return result;
 }
 
 double Point::Perimeter() const {

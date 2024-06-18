@@ -8,9 +8,10 @@ class Point: public Shape {
 private:
     Coordinate coordinate;
 public:
+    Point(double x, double y);
     virtual ~Point() = default;
 
-    std::string Draw(std::ostream &out) const;
+    std::string &Draw() const;
     double Perimeter() const;
     double Square() const;
 };

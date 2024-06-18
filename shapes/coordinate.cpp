@@ -1,7 +1,8 @@
 #include "coordinate.hpp"
 
-Coordinate::Coordinate(double x, double y):
-    x(x), y(y) {}
+Coordinate::Coordinate(): x(0), y(0) {}
+
+Coordinate::Coordinate(double _x, double _y) : x(_x), y(_y) {}
 
 double Coordinate::getX() const {
     return x;
