@@ -17,7 +17,7 @@ private:
 public:
     virtual ~ShapeFactory();
 
-    void addCreator(const std::string &name, const std::shared_ptr<ShapeCreator> &creator);
+    void addCreator(const std::string &name, ShapeCreator *creator);
     std::shared_ptr<Shape> createShape(const std::string &name, const std::vector<double> &parameters) const;
 
     static ShapeFactory instance();

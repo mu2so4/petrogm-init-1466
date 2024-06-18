@@ -19,4 +19,10 @@ file(GLOB CREATORS_SRC
      "creators/*.cpp"
 )
 
-add_library(shape SHARED ${EXCEPTION_SRC} ${SHAPES_SRC} ${CREATORS_SRC} factory.hpp factory.cpp)
+file(GLOB PARSER_SRC
+     "parser/*.h"
+     "parser/*.cpp"
+)
+
+add_library(shape SHARED factory.hpp factory.cpp
+     ${EXCEPTION_SRC} ${SHAPES_SRC} ${CREATORS_SRC} ${PARSER_SRC})
