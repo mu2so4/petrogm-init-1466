@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
                 ", square = " << shape->Square() << '\n';
         }
         catch(const ShapeException &e) {
-            std::cerr << e.what() << std::endl;
+            std::cout << "ERROR: " << e.what() << std::endl;
         }
     }
 

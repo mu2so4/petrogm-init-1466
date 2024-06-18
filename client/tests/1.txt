@@ -2,4 +2,5 @@ circle -2 2.5 666
 kwa 1 2 3
 circle 2 2 2
 point 3 4
+rect 1 2 3
 oenud 1 2

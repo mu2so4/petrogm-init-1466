@@ -1,5 +1,6 @@
 #include "include/factory.hpp"
 #include "include/shape_exception.hpp"
+#include <fmt/core.h>
 
 void ShapeFactory::addCreator(const std::string &name, ShapeCreator *creator) {
     creators[name] = std::shared_ptr<ShapeCreator>(creator);
@@ -7,7 +8,8 @@ void ShapeFactory::addCreator(const std::string &name, ShapeCreator *creator) {
 
 std::shared_ptr<Shape> ShapeFactory::createShape(const std::string &name, const std::vector<double> &parameters) const {
     if(!creators.contains(name)) {
-        throw ShapeNotFoundException(name.c_str());
+        auto message = fmt::format(fmt::format("factory: shape \"{}\" not found", name));
+        throw ShapeNotFoundException(message);
     }
     auto creator = creators.at(name);
     return creator->newInstance(parameters);

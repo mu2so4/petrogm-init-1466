@@ -2,6 +2,7 @@
 #define SHAPE_EXCEPTION_HEADER
 
 #include <exception>
+#include <string>
 
 class ShapeException: public std::exception { };
 
@@ -30,9 +31,9 @@ public:
 };
 
 class ShapeNotFoundException: public ShapeException {
-    const char *shapeName;
+    std::string cause;
 public:
-    ShapeNotFoundException(const char *shapeName);
+    ShapeNotFoundException(std::string &cause);
 
     const char *what() const throw();
 };

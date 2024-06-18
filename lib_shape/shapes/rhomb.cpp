@@ -22,7 +22,7 @@ std::string Rhomb::Draw() const {
 }
 
 double Rhomb::Perimeter() const {
-    double length = std::sqrt(length * length + width * width);
+    double length = std::sqrt(height * height + width * width);
     return length * 2;
 }
 

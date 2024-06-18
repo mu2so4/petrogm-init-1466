@@ -2,9 +2,9 @@
 
 #include <fmt/core.h>
 
-ShapeNotFoundException::ShapeNotFoundException(const char *shapeName):
-    shapeName(shapeName) {}
+ShapeNotFoundException::ShapeNotFoundException(std::string &cause):
+    cause(cause) {}
 
 const char *ShapeNotFoundException::what() const throw() {
-    return fmt::format("factory: shape \"{}\" not found", shapeName).c_str();
+    return cause.c_str();
 }
