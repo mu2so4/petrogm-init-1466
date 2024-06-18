@@ -1,2 +1,10 @@
-circle 1 -2 -1
-oenud 1 2
+line 1 2 3 4
+line 1 2 1 2
+rect 1 2 1 -2
+rect 1 2 -1 2
+rect 1 2 -1 -2
+square 6 6 6
+square 6 6 -1
+rhomb 0 0 4 2
+rhomb 0 0 1 -1
+circle 0 0 1
