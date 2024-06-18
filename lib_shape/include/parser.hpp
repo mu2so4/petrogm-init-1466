@@ -1,3 +1,6 @@
+#ifndef PARSER_HEADER
+#define PARSER_HEADER
+
 #include "parsed_shape.hpp"
 
 #include <istream>
@@ -12,3 +15,5 @@ public:
     ParsedShape parseNext();
     bool hasNext() const;
 };
+
+#endif

@@ -1,5 +1,5 @@
-#include "factory.hpp"
-#include "exception/shape_not_found_exception.hpp"
+#include "include/factory.hpp"
+#include "include/shape_exception.hpp"
 
 void ShapeFactory::addCreator(const std::string &name, ShapeCreator *creator) {
     creators[name] = std::shared_ptr<ShapeCreator>(creator);

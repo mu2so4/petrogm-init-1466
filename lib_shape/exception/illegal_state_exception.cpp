@@ -1,4 +1,4 @@
-#include "illegal_state_exception.hpp"
+#include "../include/shape_exception.hpp"
 
 IllegalStateException::IllegalStateException(const char *cause):
     cause(cause) {}

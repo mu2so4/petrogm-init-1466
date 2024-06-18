@@ -1,4 +1,4 @@
-#include "illegal_argument_exception.hpp"
+#include "../include/shape_exception.hpp"
 
 IllegalArgumentException::IllegalArgumentException(const char * _cause):
     cause(_cause) {}

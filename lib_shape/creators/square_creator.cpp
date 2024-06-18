@@ -1,6 +1,5 @@
-#include "square_creator.hpp"
-#include "../shapes/square.hpp"
-#include "../exception/illegal_argument_exception.hpp"
+#include "../include/creator.hpp"
+#include "../include/shape_exception.hpp"
 
 std::shared_ptr<Shape> SquareCreator::newInstance(const std::vector<double> &params) const {
     if(params.size() != 3) {

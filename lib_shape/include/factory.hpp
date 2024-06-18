@@ -1,8 +1,8 @@
 #ifndef SHAPE_FACTORY_HEADER
 #define SHAPE_FACTORY_HEADER
 
-#include "shapes/shape.hpp"
-#include "creators/creator.hpp"
+#include "shape.hpp"
+#include "creator.hpp"
 #include <map>
 #include <vector>
 #include <string>
@@ -10,8 +10,6 @@
 
 class ShapeFactory {
 private:
-    //ShapeFactory();
-
     std::map<std::string, std::shared_ptr<ShapeCreator> > creators{};
 
 public:
