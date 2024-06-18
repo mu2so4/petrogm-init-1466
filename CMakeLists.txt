@@ -14,4 +14,9 @@ file(GLOB SHAPES_SRC
      "shapes/*.cpp"
 )
 
-add_library(shape SHARED shape.hpp ${EXCEPTION_SRC} ${SHAPES_SRC})
+file(GLOB CREATORS_SRC
+     "creators/*.h"
+     "creators/*.cpp"
+)
+
+add_library(shape SHARED shape.hpp ${EXCEPTION_SRC} ${SHAPES_SRC} ${CREATORS_SRC} factory.hpp factory.cpp)
