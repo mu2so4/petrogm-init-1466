@@ -4,9 +4,8 @@
 Point::Point(double x, double y):
     coordinate(x, y) {}
 
-std::string &Point::Draw() const {
-    auto result = fmt::format("point at ({}, {})", coordinate.getX(), coordinate.getY());
-    return result;
+std::string Point::Draw() const {
+    return fmt::format("point at ({}, {})", coordinate.getX(), coordinate.getY());
 }
 
 double Point::Perimeter() const {

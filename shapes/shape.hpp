@@ -9,7 +9,7 @@ class Shape {
 public:
     virtual ~Shape() = default;
 
-    virtual std::string &Draw() const = 0;
+    virtual std::string Draw() const = 0;
     virtual double Perimeter() const = 0;
     virtual double Square() const = 0;
 };

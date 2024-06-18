@@ -1,7 +1,7 @@
 #ifndef CREATOR_HEADER
 #define CREATOR_HEADER
 
-#include "../shape.hpp"
+#include "../shapes/shape.hpp"
 #include <memory>
 #include <vector>
 

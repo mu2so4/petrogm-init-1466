@@ -15,10 +15,9 @@ Rect::Rect(double x1, double y1, double x2, double y2) {
     coord2 = {x2, y2};
 }
 
-std::string &Rect::Draw() const {
-    auto result = fmt::format("square at ({}, {}), ({}, {})",
+std::string Rect::Draw() const {
+    return fmt::format("square at ({}, {}), ({}, {})",
         coord1.getX(), coord1.getY(), coord2.getX(), coord2.getY());
-    return result;
 }
 
 double Rect::Perimeter() const

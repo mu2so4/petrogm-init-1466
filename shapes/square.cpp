@@ -5,16 +5,15 @@
 
 Square_::Square_(double x, double y, double length) {
     if(length < EPSILON) {
-        throw IllegalArgumentException("square: length must be more than 0");
+        throw IllegalArgumentException("square: length must be positive");
     }
     center = {x, y};
     this->length = length;
 }
 
-std::string &Square_::Draw() const {
-    auto result = fmt::format("square at center = ({}, {}), length = {}",
+std::string Square_::Draw() const {
+    return fmt::format("square at center = ({}, {}), length = {}",
         center.getX(), center.getY(), length);
-    return result;
 }
 
 double Square_::Perimeter() const {

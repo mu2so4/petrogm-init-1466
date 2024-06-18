@@ -1,7 +1,7 @@
 #ifndef SHAPE_FACTORY_HEADER
 #define SHAPE_FACTORY_HEADER
 
-#include "shape.hpp"
+#include "shapes/shape.hpp"
 #include "creators/creator.hpp"
 #include <map>
 #include <vector>

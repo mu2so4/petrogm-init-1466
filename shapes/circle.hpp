@@ -1,16 +1,16 @@
-#ifndef SQUARE_HEADER
-#define SQUARE_HEADER
+#ifndef CIRCLE_HEADER
+#define CIRCLE_HEADER
 
 #include "shape.hpp"
 #include "coordinate.hpp"
 
-class Square_: public Shape {
+class Circle: public Shape {
 private:
     Coordinate center;
-    double length;
+    double radius;
 public:
-    Square_(double x, double y, double length);
-    virtual ~Square_() = default;
+    Circle(double x, double y, double radius);
+    virtual ~Circle() = default;
 
     std::string Draw() const;
     double Perimeter() const;
