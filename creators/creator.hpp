@@ -1,5 +1,5 @@
-#ifndef CREATOR_HEADER
-#define CREATOR_HEADER
+#ifndef SHAPE_CREATOR_HEADER
+#define SHAPE_CREATOR_HEADER
 
 #include "../shapes/shape.hpp"
 #include <memory>
@@ -7,6 +7,8 @@
 
 class ShapeCreator {
 public:
+    virtual ~ShapeCreator() = default;
+
     virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const = 0;
 };
 
