@@ -1,0 +1,5 @@
+circle -2 2.5 666
+kwa 1 2 3
+circle 2 2 2
+point 3 4
+oenud 1 2

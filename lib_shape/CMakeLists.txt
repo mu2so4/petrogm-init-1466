@@ -4,6 +4,8 @@ project(shapes)
 
 set(CMAKE_CXX_STANDARD 20)
 
+find_package(fmt REQUIRED)
+
 file(GLOB INCLUDE_SRC
      "include/*.hpp"
 )
@@ -26,3 +28,5 @@ file(GLOB PARSER_SRC
 
 add_library(shape SHARED factory.cpp coordinate.cpp parser.cpp
      ${INCLUDE_SRC} ${EXCEPTION_SRC} ${SHAPES_SRC} ${CREATORS_SRC} ${PARSER_SRC})
+
+target_link_libraries(shape PUBLIC fmt::fmt)

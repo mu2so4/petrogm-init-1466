@@ -13,12 +13,10 @@ private:
     std::map<std::string, std::shared_ptr<ShapeCreator> > creators{};
 
 public:
-    virtual ~ShapeFactory();
+    virtual ~ShapeFactory() = default;
 
     void addCreator(const std::string &name, ShapeCreator *creator);
     std::shared_ptr<Shape> createShape(const std::string &name, const std::vector<double> &parameters) const;
-
-    static ShapeFactory instance();
 };
 
 #endif
