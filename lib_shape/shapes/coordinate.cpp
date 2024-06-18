@@ -1,4 +1,4 @@
-#include "include/coordinate.hpp"
+#include "coordinate.hpp"
 
 Coordinate::Coordinate(): x(0), y(0) {}
 

@@ -1,57 +1,13 @@
-#ifndef SHAPE_CREATOR_HEADER
-#define SHAPE_CREATOR_HEADER
+#include "../creators/creator.hpp"
 
-#include "shape.hpp"
-#include <memory>
-#include <vector>
+#include "../creators/circle_creator.hpp"
 
-class ShapeCreator {
-public:
-    virtual ~ShapeCreator() = default;
+#include "../creators/line_creator.hpp"
 
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const = 0;
-};
+#include "../creators/point_creator.hpp"
 
-class CircleCreator: public ShapeCreator {
-public:
-    virtual ~CircleCreator() = default;
+#include "../creators/rect_creator.hpp"
 
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
+#include "../creators/rhomb_creator.hpp"
 
-class LineCreator: public ShapeCreator {
-public:
-    virtual ~LineCreator() = default;
-
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
-
-class PointCreator: public ShapeCreator {
-public:
-    virtual ~PointCreator() = default;
-
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
-
-class RectCreator: public ShapeCreator {
-public:
-    virtual ~RectCreator() = default;
-
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
-
-class RhombCreator: public ShapeCreator {
-public:
-    virtual ~RhombCreator() = default;
-
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
-
-class SquareCreator: public ShapeCreator {
-public:
-    virtual ~SquareCreator() = default;
-
-    virtual std::shared_ptr<Shape> newInstance(const std::vector<double> &params) const;
-};
-
-#endif
+#include "../creators/square_creator.hpp"

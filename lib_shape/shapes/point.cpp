@@ -1,5 +1,4 @@
-#include "../include/shape.hpp"
-
+#include "point.hpp"
 #include <fmt/core.h>
 
 Point::Point(double x, double y):

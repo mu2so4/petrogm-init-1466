@@ -1,5 +1,6 @@
-#include "../include/creator.hpp"
-#include "../include/shape_exception.hpp"
+#include "rhomb_creator.hpp"
+#include "../shapes/rhomb.hpp"
+#include "../exception/illegal_argument_exception.hpp"
 
 std::shared_ptr<Shape> RhombCreator::newInstance(const std::vector<double> &params) const {
     if(params.size() != 4) {

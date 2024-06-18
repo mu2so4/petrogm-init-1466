@@ -4,6 +4,7 @@
 
 #include "factory.hpp"
 #include "shape.hpp"
+#include "creator.hpp"
 #include "parser.hpp"
 #include "shape_exception.hpp"
 
@@ -18,20 +19,11 @@ int main(int argc, char **argv) {
     Parser parser(in);
 
     ShapeFactory factory;
-    /*ShapeCreator *creator = new CircleCreator();
-    std::vector<double> params;
-    params.push_back(1);
-    params.push_back(2);
-    params.push_back(3);
-    auto shape = creator->newInstance(params);
-    std::cout << shape->Draw() << ", perimeter = " << shape->Perimeter() <<
-            ", square = " << shape->Square() << '\n';
-    delete creator;*/
     factory.addCreator("point", new PointCreator());
     factory.addCreator("rect", new RectCreator());
     factory.addCreator("circle", new CircleCreator());
     factory.addCreator("line", new LineCreator());
-    factory.addCreator("rhohb", new RhombCreator());
+    factory.addCreator("rhomb", new RhombCreator());
     factory.addCreator("square", new SquareCreator());
 
     

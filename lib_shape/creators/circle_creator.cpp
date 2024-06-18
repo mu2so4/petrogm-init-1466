@@ -1,5 +1,6 @@
-#include "../include/creator.hpp"
-#include "../include/shape_exception.hpp"
+#include "circle_creator.hpp"
+#include "../shapes/circle.hpp"
+#include "../exception/illegal_argument_exception.hpp"
 
 std::shared_ptr<Shape> CircleCreator::newInstance(const std::vector<double> &params) const {
     if(params.size() != 3) {

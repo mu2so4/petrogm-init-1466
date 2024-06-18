@@ -1,42 +1,9 @@
-#ifndef SHAPE_EXCEPTION_HEADER
-#define SHAPE_EXCEPTION_HEADER
+#include "../exception/shape_exception.hpp"
 
-#include <exception>
-#include <string>
+#include "../exception/illegal_argument_exception.hpp"
 
-class ShapeException: public std::exception { };
+#include "../exception/illegal_state_exception.hpp"
 
-class IllegalArgumentException: public ShapeException {
-    const char *cause;
-public:
-    IllegalArgumentException(const char *cause);
+#include "../exception/parse_failed_exception.hpp"
 
-    const char *what() const throw();
-};
-
-class IllegalStateException: public std::exception {
-    const char *cause;
-public:
-    IllegalStateException(const char *cause);
-
-    const char *what() const throw();
-};
-
-class ParseFailedException: public ShapeException {
-    const char *cause;
-public:
-    ParseFailedException(const char *cause);
-
-    const char *what() const throw();
-};
-
-class ShapeNotFoundException: public ShapeException {
-    std::string cause;
-public:
-    ShapeNotFoundException(std::string &cause);
-
-    const char *what() const throw();
-};
-
-
-#endif
+#include "../exception/shape_not_found_exception.hpp"

@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 
-
 struct ParsedShape {
     std::string name;
     std::vector<double> params;
@@ -14,4 +13,3 @@ struct ParsedShape {
 };
 
 #endif
-

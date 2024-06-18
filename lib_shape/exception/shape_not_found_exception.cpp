@@ -1,6 +1,4 @@
-#include "../include/shape_exception.hpp"
-
-#include <fmt/core.h>
+#include "shape_not_found_exception.hpp"
 
 ShapeNotFoundException::ShapeNotFoundException(std::string &cause):
     cause(cause) {}

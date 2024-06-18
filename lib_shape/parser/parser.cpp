@@ -1,5 +1,6 @@
-#include "include/parser.hpp"
-#include "include/shape_exception.hpp"
+#include "parser.hpp"
+#include "../exception/illegal_state_exception.hpp"
+#include "../exception/parse_failed_exception.hpp"
 #include <sstream>
 
 Parser::Parser(std::istream &input):
