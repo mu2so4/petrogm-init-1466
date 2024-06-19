@@ -1,0 +1,6 @@
+point -99 56
+Line 0 0 7 -8.9
+RHOMB 2.25 -0.7 1 2
+cIrClE 8 -77 2.1
+square 4 5 7
+rect -100 -100 -90 -80

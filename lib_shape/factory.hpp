@@ -10,9 +10,10 @@
 
 class ShapeFactory {
 private:
-    //ShapeFactory();
 
     std::map<std::string, std::shared_ptr<ShapeCreator> > creators{};
+
+    static std::string toLower(const std::string &str);
 
 public:
     virtual ~ShapeFactory() = default;

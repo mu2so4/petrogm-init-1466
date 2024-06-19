@@ -17,7 +17,7 @@ Line::Line(double x1, double y1, double x2, double y2) {
 }
 
 std::string Line::Draw() const {
-    return fmt::format("line at ({}, {})",
+    return fmt::format("line at ({}, {}), ({}, {})",
         a.getX(), a.getY(), b.getX(), b.getY());
 }
 

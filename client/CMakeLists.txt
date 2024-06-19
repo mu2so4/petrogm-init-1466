@@ -8,8 +8,10 @@ set(SHAPE_PATH ../lib_shape)
 
 find_package(fmt REQUIRED)
 
+
 include_directories(${SHAPE_PATH}/include)
 link_directories(${SHAPE_PATH}/build)
+
 
 add_executable(client main.cpp)
 
