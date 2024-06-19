@@ -1,13 +1,13 @@
-#include "../shapes/shape.hpp"
+#include "../src/shapes/shape.hpp"
 
-#include "../shapes/circle.hpp"
+#include "../src/shapes/circle.hpp"
 
-#include "../shapes/line.hpp"
+#include "../src/shapes/line.hpp"
 
-#include "../shapes/point.hpp"
+#include "../src/shapes/point.hpp"
 
-#include "../shapes/rect.hpp"
+#include "../src/shapes/rect.hpp"
 
-#include "../shapes/rhomb.hpp"
+#include "../src/shapes/rhomb.hpp"
 
-#include "../shapes/square.hpp"
+#include "../src/shapes/square.hpp"
